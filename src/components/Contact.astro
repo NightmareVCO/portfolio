@@ -3,19 +3,12 @@
 ---
 
 <script>
-	document.forms.contact.addEventListener("submit", async (event: any) => {
+	const form = document.querySelector('form[name="contact"]');
+	form?.addEventListener("submit", async (event: any) => {
 		event.preventDefault();
 		const form = event.target;
-		const formData = new FormData(form);
-		const response = await fetch("/", {
-			method: "POST",
-			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			body: new URLSearchParams(formData).toString(),
-		});
-		if (response.ok) {
-			form.reset();
-			alert("¡Gracias por tu mensaje!");
-		}
+		form.reset();
+		alert("¡Gracias por tu mensaje!");
 	});
 </script>
 
