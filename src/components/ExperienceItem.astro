@@ -1,0 +1,34 @@
+---
+import SocialPill from "./SocialPill.astro";
+import InfoIncon from "./icons/RightArrow.astro";
+
+interface Props {
+	title: string;
+	description: string;
+	link?: string;
+	date: string;
+}
+
+const { title, description, link, date } = Astro.props;
+---
+
+<div
+	class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+</div>
+<time class="mb-1 text-sm font-normal leading-none text-blue-100/85"
+	>{date}</time
+>
+<h3 class="text-lg font-semibold text-purple-200/90 mt-3">
+	{title}
+</h3>
+<p class="mb-4 text-base font-normal text-gray-200 text-pretty">
+	{description}
+</p>
+{
+	link && (
+		<SocialPill href="#" class="w-48">
+			Saber más
+			<InfoIncon class="size-6" />
+		</SocialPill>
+	)
+}

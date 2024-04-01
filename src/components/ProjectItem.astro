@@ -1,0 +1,75 @@
+---
+import SocialPill from "./SocialPill.astro";
+import TechnologyPill from "./TechnologyPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import WebIcon from "../components/icons/Web.astro";
+
+interface Tag {
+	name: string;
+	icon: any;
+}
+
+interface Props {
+	title: string;
+	description: string;
+	tags: Tag[];
+	image: string;
+	github?: string;
+	link?: string;
+}
+
+const { title, description, tags, image, link, github } = Astro.props;
+---
+
+<h3 class="text-2xl font-semibold text-purple-200/90">{title}</h3>
+<p class="text-lg mb-4 text-pretty">{description}</p>
+
+<div class="flex gap-x-2 mb-3 justify-start items-center">
+	<ul class="flex flex-wrap gap-x-3">
+		{
+			tags.map((tag) => (
+				<li>
+					<TechnologyPill>
+						<tag.icon class="size-6" />
+						{tag.name}
+					</TechnologyPill>
+				</li>
+			))
+		}
+	</ul>
+</div>
+{
+	link ? (
+		<a href={link} target="_blank" rel="noopener">
+			<img
+				class="rounded shadow-2xl shadow-white/7"
+				src={image}
+				alt={`Captura de pantalla del proyecto ${image}`}
+			/>
+		</a>
+	) : (
+		<img
+			class="rounded shadow-2xl shadow-white/7"
+			src={image}
+			alt={`Captura de pantalla del proyecto ${image}`}
+		/>
+	)
+}
+<div class="flex gap-x-3 mt-3">
+	{
+		github && (
+			<SocialPill href={github} class>
+				<GitHubIcon class="size-6" />
+				Ver Repositorio
+			</SocialPill>
+		)
+	}
+	{
+		link && (
+			<SocialPill href={link}>
+				<WebIcon class="size-6" />
+				Ver Proyecto
+			</SocialPill>
+		)
+	}
+</div>

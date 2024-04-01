@@ -1,0 +1,99 @@
+---
+import AboutMe from "../components/AboutMe.astro";
+import Badge from "../components/Badge.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import Contact from "../components/Contact.astro";
+import CodeIncon from "../components/icons/Code.astro";
+import Experience from "../components/Experience.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import Layout from "../layouts/Layout.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import Projects from "../components/Project.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+---
+
+<Layout
+	title="Protfolio de Vladimir Curiel - Ing Ciencias de la Computación, Desarrollador y Programador Web"
+	description="Contrata a Vladimir para crear tu aplicacion web. Desarrollador Web. Especializado en crar aplicaciones únicas.">
+	<main class="px-6">
+		<SectionContainer>
+			<img
+				class="rounded-full size-12 mb-2"
+				src="/vladimircuriel.jpg"
+				alt="Foto de Vladimir Curiel"
+			/>
+			<h1
+				class="text-white text-3xl mb-2 lg:mb-0 gap-y-2 md:text-4xl lg:text-5xl font-bold flex lg:flex-row pb-1 lg:pb-4 flex-col gap-x-4">
+				Hey, soy Vladimir
+				<a
+					href="https://www.linkedin.com/in/vladimircuriel/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-start lg:justify-center items-center hover:scale-105 transition ease-in-out">
+					<div class="flex justify-start lg:justify-center items-center">
+						<Badge>Disponible para trabajar</Badge>
+					</div>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				Estudiante
+				<span>Ing. Ciencias de la computación.</span>
+				<span class="text-purple-200/90">
+					Enfocado en el desarrollo de apliaciones Web.
+				</span>
+				<span class="text-blue-200/90">
+					De Santiago, Republica Dominicana.
+				</span>
+				<span class="opacity-75">
+					Centrado en crear aplicaciones únicas.
+				</span>
+			</h2>
+
+			<nav class="flex gap-4 mt-4 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/vladimircuriel/">
+					<LinkedInIcon class="size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/NightmareVCO">
+					<GitHubIcon class="size-6" />
+					GitHub
+				</SocialPill>
+				<SocialPill href="mailto:vladimircuriel@outlook.com">
+					<MailIcon class="size-6" />
+					vladimircuriel@outlook.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		<!--
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 items-center gap-x-3 flex">
+				<BriefcaseIcon class="size-7" /> Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer> -->
+
+		<SectionContainer id="proyectos" class="flex flex-col gap-y-10">
+			<h2 class="text-2xl font-semibold mb-6 items-center gap-x-3 flex">
+				<CodeIncon class="size-7" /> Proyectos Realizados
+			</h2>
+			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="sobre-mi">
+			<h2 class="text-2xl font-semibold mb-6 items-center gap-x-3 flex">
+				<ProfileCheck class="size-7" /> Sobre mí
+			</h2>
+			<AboutMe />
+		</SectionContainer>
+
+		<SectionContainer id="contacto">
+			<h2 class="text-2xl font-semibold mb-6 items-center gap-x-3 flex">
+				<ProfileCheck class="size-7" /> Contacta Conmigo
+			</h2>
+			<Contact />
+		</SectionContainer>
+	</main>
+</Layout>
