@@ -4,6 +4,9 @@ import JavaIcon from "./icons/Java.astro";
 import HTMLIcon from "./icons/HTML.astro";
 import BootstrapIcon from "./icons/Bootstrap.astro";
 import JavaScriptIcon from "./icons/JavaScript.astro";
+import NextJSIcon from "./icons/NextJsIcon.astro";
+import MongoDBIcon from "./icons/MongoDBIcon.astro";
+import TailwindCssIcon from "./icons/TailwindCssIcon.astro";
 
 const TAGS = {
 	JAVA: {
@@ -22,17 +25,36 @@ const TAGS = {
 		name: "JavaScript",
 		icon: JavaScriptIcon,
 	},
+	NEXTJS: {
+		name: "Next.js",
+		icon: NextJSIcon,
+	},
+	MONGODB: {
+		name: "MongoDB",
+		icon: MongoDBIcon,
+	},
+	TAILWINDCSS: {
+		name: "Tailwind CSS",
+		icon: TailwindCssIcon,
+	},
 };
 
 const PROJECTS = [
 	{
-		title: "Polls App",
+		title: "Linkloom Url Shortener",
 		description:
-			"Una aplicación web para llenar formularios y guardar la información, permitiendo visualizar en un mapa las entradas. Permite estar offline al momento de llenar una encuesta. Incluye autentificación de usuarios y roles.",
-		github:
-			"https://github.com/NightmareVCO/practicas-icc-352/tree/main/parcial-2",
-		image: "/projects/polls.webp",
-		tags: [TAGS.JAVA, TAGS.HTML, TAGS.BOOTSTRAP, TAGS.JS],
+			"Desarrollé un sistema web que permitir a los usuarios registrar URLs, acortarlas y obtener estadísticas de acceso. Implementé características innovadoras integración de códigos QR y vista previa del recurso al agregar un nuevo enlace. El sistema fue construido con Next.js y MongoDB utilizando Mongoose, y utiliza NextAuth para la autenticación.",
+		// github: "https://github.com/your-github-url",
+		image: "/projects/linkloom.webp", // reemplaza esto con la ruta de tu imagen
+		tags: [TAGS.NEXTJS, TAGS.MONGODB],
+	},
+	{
+		title: "Dashboard Administrativo de Linkloom",
+		description:
+			"Desarrollé un dashboard administrativo para la aplicación Linkloom, que permite a los usuarios ver gráficos detallados, listas de datos y realizar búsquedas en las listas, gráficos de acceso utilizando Recharts. El dashboard fue construido con Next.js y MongoDB utilizando Mongoose, y utiliza NextAuth para la autenticación.",
+		// github: "https://github.com/your-github-url", // reemplaza esto con la URL de tu repositorio
+		image: "/projects/dashboard.webp", // reemplaza esto con la ruta de tu imagen
+		tags: [TAGS.NEXTJS, TAGS.MONGODB],
 	},
 ];
 ---
