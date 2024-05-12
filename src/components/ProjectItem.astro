@@ -45,6 +45,8 @@ const { title, description, tags, image, link, github } = Astro.props;
 				class="rounded shadow-2xl shadow-white/7"
 				src={image}
 				alt={`Captura de pantalla del proyecto ${image}`}
+				width="100%"
+				height="auto"
 			/>
 		</a>
 	) : (
@@ -52,6 +54,8 @@ const { title, description, tags, image, link, github } = Astro.props;
 			class="rounded shadow-2xl shadow-white/7"
 			src={image}
 			alt={`Captura de pantalla del proyecto ${image}`}
+			width="100%"
+			height="auto"
 		/>
 	)
 }
