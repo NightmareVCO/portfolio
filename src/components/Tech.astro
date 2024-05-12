@@ -109,8 +109,28 @@ const TECHNOLOGIES = [
 			delay: 0,
 			disableOnInteraction: false,
 		},
-		slidesPerView: 8,
 		speed: 2500,
+
+		breakpoints: {
+			320: {
+				slidesPerView: 3,
+			},
+			640: {
+				slidesPerView: 4,
+			},
+			768: {
+				slidesPerView: 5,
+			},
+			1024: {
+				slidesPerView: 6,
+			},
+			1280: {
+				slidesPerView: 7,
+			},
+			1536: {
+				slidesPerView: 8,
+			},
+		},
 	});
 </script>
 
@@ -146,6 +166,13 @@ const TECHNOLOGIES = [
 			rgba(2, 6, 23, 0)
 		);
 	}
+
+	/* @media (max-width: 600px) {
+		.shadow-left,
+		.shadow-right {
+			display: none;
+		}
+	} */
 
 	.swiper {
 		position: relative;
